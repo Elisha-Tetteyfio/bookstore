@@ -1,9 +1,21 @@
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
 
 function App() {
   return (
     <div className="App">
-      Elisha
+      <Header />
+      <Switch>
+        <Route path="/" exact>
+          <Books />
+        </Route>
+        <Route path="/categories" exact>
+          <Categories />
+        </Route>
+      </Switch>
     </div>
   );
 }
