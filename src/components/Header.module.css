@@ -1,0 +1,17 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSide {
+  display: flex;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.linkItem {
+  padding: 15px;
+}
