@@ -1,37 +1,43 @@
 import React from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import { removeBook } from '../redux/books/books';
+import style from './design/Book.module.css';
 
-const Book = (title, author, id) => {
+const Book = (title, author, id, category) => {
   const dispatch = useDispatch();
   return (
-    <li key={id} style={{ background: '#eee', margin: '15px' }}>
-      <div className="leftSide">
+    <li key={id} className={style.card}>
+      <div className={style.leftSide}>
         <div className="name">
-          {/* Genre */}
-          <br />
-          {title}
-          <br />
-          {author}
+          <div className={style.category}>{category}</div>
+          <div className={style.titleDiv}>
+            <h3 className={style.title}>{title}</h3>
+            <p className={style.author}>{author}</p>
+          </div>
           <div>
-            <button type="button">Comments</button>
+            <button type="button" className={style.interactButtons}>Comments</button>
             <button
               type="button"
               onClick={() => { dispatch(removeBook(id)); }}
+              className={style.interactButtons}
             >
               Remove
             </button>
-            <button type="button">Edit</button>
+            <button type="button" className={style.interactButtons}>Edit</button>
           </div>
         </div>
-        <div className="progress">
-          Progress
+        <div className={style.progress}>
+          <div className={style.progressBar} />
+          <div className={style.completed}>
+            <div className={style.percentComplete}>50%</div>
+            <div className={style.completedText}>Completed</div>
+          </div>
         </div>
       </div>
-      <div className="rightSide">
-        <h3>Current Chapter</h3>
-        Chapter title
-        <button type="button">Update progress</button>
+      <div className={style.rightSide}>
+        <h3 className={style.currentChapter}>CURRENT CHAPTER</h3>
+        <p className={style.chapter}>Chapter title</p>
+        <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>
   );

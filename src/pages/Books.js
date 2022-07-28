@@ -15,7 +15,8 @@ const Books = () => {
 
   return (
     <>
-      { book.map((element) => Book(element.title, element.author, element.id)) }
+      { book.map((element) => Book(element.title, element.author, element.id, element.category)) }
+      <hr />
       <Form />
     </>
   );
