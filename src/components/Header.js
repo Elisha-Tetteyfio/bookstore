@@ -1,23 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './design/Header.module.css';
+import userIcon from './design/user.png';
 
 const Header = () => (
   <div className={styles.head}>
     <div className={styles.leftSide}>
-      <h1>Bookstore CMS</h1>
+      <h1 className={styles.title}>Bookstore CMS</h1>
       <div>
         <ul className={styles.links}>
           <li className={styles.linkItem}>
-            <NavLink to="/" exact>Books</NavLink>
+            <NavLink to="/" exact activeClassName={styles.active}>BOOKS</NavLink>
           </li>
           <li className={styles.linkItem}>
-            <NavLink to="/categories" exact>Categories</NavLink>
+            <NavLink to="/categories" exact activeClassName={styles.active}>CATEGORIES</NavLink>
           </li>
         </ul>
       </div>
     </div>
-    <>UserIcon</>
+    <img src={userIcon} alt="user" />
   </div>
 );
 

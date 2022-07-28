@@ -1,0 +1,46 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.938rem;
+  margin-bottom: 2.375rem;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-weight: bold;
+  width: 15rem;
+}
+
+.leftSide {
+  display: flex;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.linkItem {
+  padding: 15px;
+  width: 3.688rem;
+  height: 1rem;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+}
+
+.linkItem > * {
+  color: #828282;
+  text-decoration: none;
+}
+
+.active {
+  color: #121212;
+}
+
+img {
+  width: 2.813rem;
+  height: 2.813rem;
+}

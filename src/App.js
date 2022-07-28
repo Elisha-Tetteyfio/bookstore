@@ -1,12 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
+import styles from './App.module.css';
 import Header from './components/Header';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Header />
       <Switch>
         <Route path="/" exact>
