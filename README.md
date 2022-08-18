@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Not available yet](https://livedemo.com)
+[See live demo](https://stellar-pasca-f23a3b.netlify.app/)
 
 
 To get a local copy up and running follow these simple example steps.
